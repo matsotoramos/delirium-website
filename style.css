@@ -20,6 +20,7 @@ body {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 .logo {
   font-size: 1.5rem;
@@ -85,6 +86,9 @@ footer {
   overflow: hidden;
   padding: 2rem 0;
   background: #1a1a1a;
+  margin-top: -80px; /* visually places it behind the sticky banner */
+  position: relative;
+  z-index: 1;
 }
 
 /* Moving track */
