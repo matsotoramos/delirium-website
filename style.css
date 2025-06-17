@@ -38,7 +38,6 @@ nav a:hover {
 
 /* News section */
 .news {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,11 +47,9 @@ nav a:hover {
   max-width: 100%;
   border-radius: 12px;
   margin-bottom: 1rem;
-  z-index: 1;
 }
 .news-text {
   text-align: center;
-  z-index: 3;
 }
 .news-text h1 {
   margin-bottom: 0.5rem;
@@ -83,25 +80,22 @@ footer {
   color: #777;
 }
 
-/* Carousel container inside news section */
+/* Carousel container */
 .card-carousel {
-  position: absolute;
-  bottom: 12%;
-  left: 0;
-  width: 100%;
   overflow: hidden;
-  z-index: 2;
+  padding: 2rem 0;
+  background: #1a1a1a;
 }
 
 /* Moving track */
 .carousel-track {
   display: flex;
-  width: fit-content;
-  animation: scroll-left 60s linear infinite;
+  width: max-content;
+  animation: scroll-left 120s linear infinite;
 }
 
 .carousel-track img {
-  width: 160px;
+  width: 180px;
   height: auto;
   margin: 0 10px;
   border-radius: 12px;
