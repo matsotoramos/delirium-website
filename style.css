@@ -79,3 +79,37 @@ footer {
   font-size: 0.9rem;
   color: #777;
 }
+
+/* Carousel container */
+.card-carousel {
+  overflow: hidden;
+  padding: 2rem 0;
+  background: #1a1a1a;
+}
+
+/* Moving track */
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.carousel-track img {
+  width: 180px;
+  height: auto;
+  margin: 0 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  object-fit: cover;
+}
+
+/* Animation keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
