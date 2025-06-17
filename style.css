@@ -91,7 +91,7 @@ footer {
 .carousel-track {
   display: flex;
   width: max-content;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 120s linear infinite;
 }
 
 .carousel-track img {
