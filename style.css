@@ -6,8 +6,8 @@
 }
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background: #0e0e0e;
-  color: #f2f2f2;
+  background: #C24E2A;
+  color: #ffffff;
   line-height: 1.6;
 }
 
@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1a1a1a;
+  background: #E3C99A;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -25,33 +25,47 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ffe266;
+  color: #C18A1E;
 }
 nav a {
   margin-left: 1rem;
   text-decoration: none;
-  color: #f2f2f2;
+  color: #C18A1E;
   font-weight: 500;
 }
 nav a:hover {
-  color: #ffe266;
+  color: #C24E2A;
 }
 
 /* News section */
 .news {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
   padding: 2rem;
+  flex-wrap: wrap;
 }
-.news img {
-  max-width: 100%;
+
+.news-image {
+  flex: 1;
+  max-width: 50%;
+}
+.news-image img {
+  width: 100%;
   border-radius: 12px;
-  margin-bottom: 1rem;
 }
+
 .news-text {
+  flex: 1;
+  max-width: 50%;
   text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
+
 .news-text h1 {
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
@@ -61,8 +75,8 @@ nav a:hover {
   font-size: 1.1rem;
 }
 .button {
-  background-color: #ffe266;
-  color: #1a1a1a;
+  background-color: #4B9D9A;
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 8px;
@@ -70,7 +84,7 @@ nav a:hover {
   transition: background 0.2s;
 }
 .button:hover {
-  background-color: #ffce00;
+  background-color: #2C736E;
 }
 
 /* Footer */
@@ -78,14 +92,14 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
-  color: #777;
+  color: #E8AC26;
 }
 
 /* Carousel container */
 .card-carousel {
   overflow: hidden;
-  padding: 4.5rem 0 2rem 0;  /* enough top padding to clear the sticky banner */
-  background: #1a1a1a;
+  padding: 0rem 0 0.5rem 0;  /* enough top padding to clear the sticky banner */
+  background: #E3C99A;
   position: relative;
   z-index: 1; /* behind banner */
 }
@@ -99,11 +113,11 @@ footer {
 }
 
 .carousel-track img {
-  width: 80px;
+  width: 60px;
   height: auto;
   margin: 0 10px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 10px rgba(97, 97, 97, 0.4);
   object-fit: cover;
 }
 
