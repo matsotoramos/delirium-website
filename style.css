@@ -17,7 +17,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #E3C99A;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -39,18 +39,19 @@ nav a:hover {
 
 /* News section */
 .news {
+  margin-top: 120px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 0 4rem;
   flex-wrap: wrap;
 }
 
 .news-image {
   flex: 1;
-  max-width: 50%;
+  max-width: 60%;
 }
 .news-image img {
   width: 100%;
@@ -59,7 +60,7 @@ nav a:hover {
 
 .news-text {
   flex: 1;
-  max-width: 50%;
+  max-width: 40%;
   text-align: center;
   padding: 2rem 1rem;
   font-size: 1.1rem;
@@ -98,11 +99,14 @@ footer {
 /* Carousel container */
 .card-carousel {
   overflow: hidden;
-  padding: 0rem 0 0.5rem 0;  /* enough top padding to clear the sticky banner */
+  padding: 0.4rem 0;
   background: #E3C99A;
-  position: relative;
-  z-index: 1; /* behind banner */
+  position: fixed;
+  top: 3.3rem;
+  width: 100%;
+  z-index: 5;
 }
+
 
 
 /* Moving track */
@@ -128,5 +132,32 @@ footer {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .news {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
+  .news-image,
+  .news-text {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .news-text {
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+
+  .news-text p {
+    font-size: 1rem;
+  }
+
+  .news-image img {
+    width: 100%;
+    height: auto;
   }
 }
