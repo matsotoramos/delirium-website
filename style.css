@@ -26,7 +26,15 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   color: #C18A1E;
+  display: flex;
+  align-items: center;
 }
+.logo-img{
+  height: 3rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
 nav a {
   margin-left: 1rem;
   text-decoration: none;
@@ -48,7 +56,6 @@ nav a:hover {
   padding: 0 4rem;
   flex-wrap: wrap;
 }
-
 .news-image {
   flex: 1;
   max-width: 60%;
@@ -56,8 +63,12 @@ nav a:hover {
 .news-image img {
   width: 100%;
   border-radius: 12px;
+  transition: opacity 0.1s ease;
+  opacity: 1;
 }
-
+.news-image img.fade-out {
+  opacity: 0;
+}
 .news-text {
   flex: 1;
   max-width: 40%;
@@ -66,7 +77,6 @@ nav a:hover {
   font-size: 1.1rem;
   line-height: 1.7;
 }
-
 .news-text h1 {
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
@@ -75,6 +85,17 @@ nav a:hover {
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
+
+.news-text {
+  transition: opacity 0.1s ease;
+  opacity: 1;
+}
+
+.news-text.fade-out {
+  opacity: 0;
+}
+
+
 .button {
   background-color: #4B9D9A;
   color: #ffffff;
@@ -107,15 +128,12 @@ footer {
   z-index: 5;
 }
 
-
-
 /* Moving track */
 .carousel-track {
   display: flex;
   width: max-content;
   animation: scroll-left 120s linear infinite;
 }
-
 .carousel-track img {
   width: 60px;
   height: auto;
@@ -140,24 +158,21 @@ footer {
     flex-direction: column;
     padding: 1.5rem 1rem;
   }
-
   .news-image,
   .news-text {
     max-width: 100%;
     flex: none;
   }
-
   .news-text {
     padding: 1rem 0;
     font-size: 1rem;
   }
-
   .news-text p {
     font-size: 1rem;
   }
-
   .news-image img {
     width: 100%;
     height: auto;
+    border-radius: 12px;
   }
 }
