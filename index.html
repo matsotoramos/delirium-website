@@ -85,38 +85,24 @@
 
 <script>
   const image = document.querySelector('.news-image img');
-  const textBlock = document.querySelector('.news-text');
 
-  const newsItems = [
-    {
-      img: 'images/news01.jpg',
-      title: 'Enter the Realm of Delirium',
-      text: `Enter a realm of mist and myth, where riddles linger and forgotten beings whisper from beyond the veil.<br><br>
-             In Delirium, shadows speak and imagination holds power. Challenge 4 to 8 players in a surreal contest of clues, deception, and intuition — within a singular enchanted App.`
-    },
-    {
-      img: 'images/news02.jpg',
-      title: 'A New Presence Emerges',
-      text: `From the depths of forgotten dreams rises a new vision. Whispers take shape, and what was once shadow demands your attention.<br><br>
-             Delirium expands. Will you follow the call?`
-    }
+  const images = [
+    'images/news01.jpg',
+    'images/news02.jpg'
   ];
 
   let index = 0;
   setInterval(() => {
     image.classList.add('fade-out');
-    textBlock.classList.add('fade-out');
 
     setTimeout(() => {
-      index = (index + 1) % newsItems.length;
-      image.src = newsItems[index].img;
-      textBlock.querySelector('h1').innerHTML = newsItems[index].title;
-      textBlock.querySelector('p').innerHTML = newsItems[index].text;
+      index = (index + 1) % images.length;
+      image.src = images[index];
       image.classList.remove('fade-out');
-      textBlock.classList.remove('fade-out');
-    }, 100);
+    }, 500); // match CSS transition time
   }, 5000);
 </script>
+
 
 </body>
 </html>
