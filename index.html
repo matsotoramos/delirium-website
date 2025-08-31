@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header / Banner -->
   <header class="banner">
     <div class="logo">
       Delirium
@@ -16,94 +17,76 @@
     <nav>
       <a href="#about">About</a>
       <a href="#store">Store</a>
+      <a href="privacy.html" rel="noopener">Privacy</a>
     </nav>
   </header>
 
-  <main>
-    <section class="card-carousel">
-      <div class="carousel-track">
-        <img src="images/card01.jpeg" alt="Card 01" />
-        <img src="images/card02.jpeg" alt="Card 02" />
-        <img src="images/card03.jpeg" alt="Card 03" />
-        <img src="images/card04.jpeg" alt="Card 04" />
-        <img src="images/card05.jpeg" alt="Card 05" />
-        <img src="images/card06.jpeg" alt="Card 06" />
-        <img src="images/card07.jpeg" alt="Card 07" />
-        <img src="images/card08.jpeg" alt="Card 08" />
-        <img src="images/card09.jpeg" alt="Card 09" />
-        <img src="images/card10.jpeg" alt="Card 10" />
-        <img src="images/card11.jpeg" alt="Card 11" />
-        <img src="images/card12.jpeg" alt="Card 12" />
-        <img src="images/card13.jpeg" alt="Card 13" />
-        <img src="images/card14.jpeg" alt="Card 14" />
-        <img src="images/card15.jpeg" alt="Card 15" />
-        <img src="images/card16.jpeg" alt="Card 16" />
-        <img src="images/card17.jpeg" alt="Card 17" />
-        <img src="images/card18.jpeg" alt="Card 18" />
-        <img src="images/card19.jpeg" alt="Card 19" />
-        <img src="images/card20.jpeg" alt="Card 20" />
-        <img src="images/card01.jpeg" alt="Card 01 duplicated" />
-        <img src="images/card02.jpeg" alt="Card 02 duplicated" />
-        <img src="images/card03.jpeg" alt="Card 03 duplicated" />
-        <img src="images/card04.jpeg" alt="Card 04 duplicated" />
-        <img src="images/card05.jpeg" alt="Card 05 duplicated" />
-        <img src="images/card06.jpeg" alt="Card 06 duplicated" />
-        <img src="images/card07.jpeg" alt="Card 07 duplicated" />
-        <img src="images/card08.jpeg" alt="Card 08 duplicated" />
-        <img src="images/card09.jpeg" alt="Card 09 duplicated" />
-        <img src="images/card10.jpeg" alt="Card 10 duplicated" />
-        <img src="images/card11.jpeg" alt="Card 11 duplicated" />
-        <img src="images/card12.jpeg" alt="Card 12 duplicated" />
-        <img src="images/card13.jpeg" alt="Card 13 duplicated" />
-        <img src="images/card14.jpeg" alt="Card 14 duplicated" />
-        <img src="images/card15.jpeg" alt="Card 15 duplicated" />
-        <img src="images/card16.jpeg" alt="Card 16 duplicated" />
-        <img src="images/card17.jpeg" alt="Card 17 duplicated" />
-        <img src="images/card18.jpeg" alt="Card 18 duplicated" />
-        <img src="images/card19.jpeg" alt="Card 19 duplicated" />
-        <img src="images/card20.jpeg" alt="Card 20 duplicated" />
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Surreal multiplayer storytelling</h1>
+      <p>Play Delirium with friends in real time. Create parties instantly with a QR code and dive into rounds of creative guessing.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#store">Get the app</a>
+        <a class="btn ghost" href="#about">Learn more</a>
       </div>
+    </div>
+    <div class="hero-image">
+      <img id="hero-rotator" src="images/feature-01.jpg" alt="Delirium surreal cards preview"/>
+    </div>
+  </section>
+
+  <!-- About (anchor target for your existing link) -->
+  <main>
+    <section id="about" class="content-block">
+      <h2>About</h2>
+      <p>Delirium is a creative party game with original surreal illustrations. One player gives a clue; others try to hide among the choices; everyone guesses. Simple rules, endless variety.</p>
+      <ul class="bullets">
+        <li>Real-time multiplayer sessions</li>
+        <li>Fast setup with QR party join</li>
+        <li>Configurable timing and scoring</li>
+      </ul>
     </section>
 
-    <section class="news">
-      <div class="news-image">
-        <img src="images/news01.jpg" alt="Delirium News" />
-      </div>
-      <div class="news-text">
-        <h1>Enter the Realm of Delirium</h1>
-        <p>
-          Enter a realm of mist and myth, where riddles linger and forgotten beings whisper from beyond the veil.<br><br>
-          In Delirium, shadows speak and imagination holds power. Challenge 4 to 8 players in a surreal contest of clues, deception, and intuition — within a singular enchanted App.
-        </p>
-        <a href="#store" class="button">Get It Now</a>
+    <!-- Store (anchor target for your existing link) -->
+    <section id="store" class="content-block store-block">
+      <h2>Store</h2>
+      <p>Download Delirium on your device and start a session with friends.</p>
+      <div class="store-badges">
+        <a class="store-badge" href="#" aria-label="Get it on Google Play">
+          <img src="images/google-play-badge.png" alt="Get it on Google Play">
+        </a>
+        <a class="store-badge" href="#" aria-label="Download on the App Store">
+          <img src="images/app-store-badge.png" alt="Download on the App Store">
+        </a>
       </div>
     </section>
   </main>
 
+  <!-- Footer with Privacy link mirrored -->
   <footer>
-    <p>&copy; 2025 Tinamati</p>
+    <p>&copy; 2025 Tinamati &nbsp;|&nbsp; <a href="privacy.html" rel="noopener">Privacy</a></p>
   </footer>
 
-<script>
-  const image = document.querySelector('.news-image img');
-
-  const images = [
-    'images/news01.jpg',
-    'images/news02.jpg'
-  ];
-
-  let index = 0;
-  setInterval(() => {
-    image.classList.add('fade-out');
-
-    setTimeout(() => {
-      index = (index + 1) % images.length;
-      image.src = images[index];
-      image.classList.remove('fade-out');
-    }, 500); // match CSS transition time
-  }, 5000);
-</script>
-
-
+  <!-- Lightweight rotator for the hero image (optional) -->
+  <script>
+    const images = [
+      'images/feature-01.jpg',
+      'images/feature-02.jpg',
+      'images/feature-03.jpg'
+    ];
+    const image = document.getElementById('hero-rotator');
+    if (image) {
+      let index = 0;
+      setInterval(() => {
+        image.classList.add('fade-out');
+        setTimeout(() => {
+          index = (index + 1) % images.length;
+          image.src = images[index];
+          image.classList.remove('fade-out');
+        }, 500); // match CSS transition time
+      }, 5000);
+    }
+  </script>
 </body>
 </html>
