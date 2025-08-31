@@ -92,14 +92,14 @@
 
       <h2 style="margin-top:1.2rem;">13) Contact</h2>
       <p>If you have questions or requests about privacy, email us at
-        <a id="privacyEmail" href="#" rel="nofollow">privacy@</a>.
+        <a id="privacyEmail" href="#" rel="nofollow">support@deliriumgame.com</a>.
       </p>
       <script>
         // Build a contact address that matches your domain without hard-coding it.
         (function(){
           var host = window.location.hostname || "deliriumgame.com";
-          var addr = "privacy@" + host;
-          var el = document.getElementById("support");
+          var addr = "support@" + host;
+          var el = document.getElementById("privacyEmail");
           el.textContent = addr;
           el.setAttribute("href", "mailto:" + addr);
         })();
